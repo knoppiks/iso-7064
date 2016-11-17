@@ -6,6 +6,9 @@
 (defn pure-system [alphabet modulus rad two-check-characters?]
   (->PureSystem alphabet modulus rad two-check-characters?))
 
+(defn hybrid-system [alphabet]
+  (->HybridSystem alphabet (count alphabet)))
+
 (defn valid? [sys s]
   (-valid? sys s))
 
