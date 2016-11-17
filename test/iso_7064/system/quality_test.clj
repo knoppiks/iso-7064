@@ -1,4 +1,4 @@
-(ns iso-7064.system.pure.quality-test
+(ns iso-7064.system.quality-test
   (:require [clojure.test :refer :all]
             [iso-7064.core :refer :all]
             [iso-7064.test_util :refer :all]
@@ -73,7 +73,7 @@
      {:samples samples :num-undetected (count undetected)}}))
 
 (defn- do-test [modify-fn samples]
-  (->> pure-systems
+  (->> (merge pure-systems hybrid-systems)
        (map (partial test-system samples modify-fn))
        (apply merge)))
 

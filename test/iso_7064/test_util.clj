@@ -82,6 +82,19 @@
    {:impl mod-1271-36 :ref ref-mod-1271-36
     :examples ["ISO79"] :allowed-chars "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"}})
 
+(def hybrid-systems
+  {:mod-11*10
+   {:impl (hybrid-system "0123456789")
+    :allowed-chars "0123456789"}
+
+   :mod-27*26
+   {:impl (hybrid-system "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    :allowed-chars "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
+
+   :mod-37*36
+   {:impl (hybrid-system "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    :allowed-chars "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"}})
+
 (defn gen-char-from [chars]
   "Generate characters from given list of characters."
   (gen/fmap #(get (vec (seq chars)) %) (gen/choose 0 (dec (count chars)))))
