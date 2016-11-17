@@ -73,7 +73,7 @@
      {:samples samples :num-undetected (count undetected)}}))
 
 (defn- do-test [modify-fn samples]
-  (->> systems
+  (->> pure-systems
        (map (partial test-system samples modify-fn))
        (apply merge)))
 

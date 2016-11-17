@@ -56,7 +56,7 @@
 (def mod-1271-36
   (pure-system "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" 1271 36 true))
 
-(def systems
+(def pure-systems
   {:mod-11-2
    {:impl mod-11-2 :ref ref-mod-11-2
     :examples ["898901"] :allowed-chars "0123456789"}

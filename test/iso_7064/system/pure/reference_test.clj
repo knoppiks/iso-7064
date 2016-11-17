@@ -7,7 +7,7 @@
             [clojure.test.check.generators :as gen]))
 
 (deftest check-example-cases
-  (->> systems
+  (->> pure-systems
        (mapv
          (fn [[key {:keys [impl ref examples]}]]
            (testing (name key)
@@ -16,7 +16,7 @@
                                 (calc-check-character ref %))))))))))
 
 (deftest generated-cases
-  (->> systems
+  (->> pure-systems
        (mapv
          (fn [[key {:keys [impl ref allowed-chars]}]]
            (testing (name key)
