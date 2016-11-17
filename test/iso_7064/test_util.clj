@@ -62,9 +62,9 @@
     :examples ["898901"] :allowed-chars "0123456789"}
 
    :mod-31-2
-   {:impl (pure-system "0123456789ABCDEFGHJKLMPQRTUWXYZ" 31 2 false)
-    :ref (ref-custom "0123456789ABCDEFGHJKLMPQRTUWXYZ" 31 2 false)
-    :examples ["A82KP"] :allowed-chars "0123456789ABCDEFGHJKLMPQRTUWXYZ"}
+   {:impl (pure-system "0123456789ACDEFGHJKLMPQRTUVWXYZ" 31 2 false)
+    :ref (ref-custom "0123456789ACDEFGHJKLMPQRTUVWXYZ" 31 2 false)
+    :examples ["A82KP"] :allowed-chars "0123456789ACDEFGHJKLMPQRTUVWXYZ"}
 
    :mod-37-2
    {:impl mod-37-2 :ref ref-mod-37-2
@@ -84,8 +84,8 @@
 
 (defn gen-char-from [chars]
   "Generate characters from given list of characters."
-  (gen/fmap #(get (vec (seq chars)) %) (gen/choose 0 31)))
+  (gen/fmap #(get (vec (seq chars)) %) (gen/choose 0 (dec (count chars)))))
 
 (defn gen-string-from [chars]
   "Generate strings from given list of characters."
-  (gen/fmap clojure.string/join (gen/vector (gen-char-from chars))))
+  (gen/fmap clojure.string/join (gen/vector (gen-char-from chars) 4 15)))
