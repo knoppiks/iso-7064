@@ -1,5 +1,7 @@
 # Clojure Implementation of ISO 7064
 
+[![Clojars Project](https://img.shields.io/clojars/v/org.clojars.knoppiks/iso-7064.svg)](https://clojars.org/org.clojars.knoppiks/iso-7064)
+
 Clojure implementation of [ISO 7064 - Check check character systems](1).
 Providing all Pure and Hybrid systems listed in the standard under 5.4.1.
 Moreover custom check character systems can be created.
