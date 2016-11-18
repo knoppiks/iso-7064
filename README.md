@@ -2,7 +2,7 @@
 
 [![Clojars Project](https://img.shields.io/clojars/v/org.clojars.knoppiks/iso-7064.svg)](https://clojars.org/org.clojars.knoppiks/iso-7064)
 
-Clojure implementation of [ISO 7064 - Check check character systems](1).
+Clojure implementation of [ISO 7064 - Check check character systems][1].
 Providing all Pure and Hybrid systems listed in the standard under 5.4.1.
 Moreover custom check character systems can be created.
 
@@ -32,7 +32,7 @@ To install, just add the following to your project dependencies:
 (iso-7064.core/valid? sys "05BCA")
 ```
 Note: Custom systems may be useless, if arguments are chosen unwisely.
-For more information refer to the [standard](1) or other sources on check
+For more information refer to the [standard][1] or other sources on check
 character systems. 
 
 ## License
