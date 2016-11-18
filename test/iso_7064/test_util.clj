@@ -41,21 +41,6 @@
   (-> (CustomPureSystem. alphabet modulus rad two-check-characters?)
       (wrap two-check-characters?)))
 
-(def mod-11-2
-  (pure-system "0123456789X" 11 2 false))
-
-(def mod-37-2
-  (pure-system "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ*" 37 2 false))
-
-(def mod-97-10
-  (pure-system "0123456789" 97 10 true))
-
-(def mod-661-26
-  (pure-system "ABCDEFGHIJKLMNOPQRSTUVWXYZ" 661 26 true))
-
-(def mod-1271-36
-  (pure-system "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ" 1271 36 true))
-
 (def pure-systems
   {:mod-11-2
    {:impl mod-11-2 :ref ref-mod-11-2
@@ -84,15 +69,15 @@
 
 (def hybrid-systems
   {:mod-11*10
-   {:impl (hybrid-system "0123456789")
+   {:impl mod-1110
     :allowed-chars "0123456789"}
 
    :mod-27*26
-   {:impl (hybrid-system "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+   {:impl mod-2726
     :allowed-chars "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
 
    :mod-37*36
-   {:impl (hybrid-system "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+   {:impl mod-3736
     :allowed-chars "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"}})
 
 (defn gen-char-from [chars]
