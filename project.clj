@@ -1,4 +1,4 @@
-(defproject iso-7064 "0.1-SNAPSHOT"
+(defproject org.clojars.knoppiks/iso-7064 "0.1.0"
   :description "Implementation of ISO 7064"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
