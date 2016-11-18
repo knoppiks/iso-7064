@@ -8,7 +8,7 @@ Moreover custom check character systems can be created.
 
 To install, just add the following to your project dependencies:
 ```
-[org.clojars.knoppiks/iso-7064 "0.1.2"]
+[org.clojars.knoppiks/iso-7064 "0.1.0"]
 ```
 
 ## Usage
