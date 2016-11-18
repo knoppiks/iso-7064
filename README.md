@@ -16,20 +16,20 @@ To install, just add the following to your project dependencies:
 ## Usage
 
 ```
-(require 'iso-7064.core)
+(use 'iso-7064.core)
 
-(iso-7064.core/calc-check-character iso-7064.core/mod-11-2 "079")
-(iso-7064.core/valid? iso-7064.core/mod-11-2 "079X")
+(calc-check-character mod-11-2 "079")
+(valid? mod-11-2 "079X")
 ```
 
 ### Creating a custom system
 
 ```
-(require 'iso-7064.core)
+(use 'iso-7064.core)
 
-(def sys (iso-7064.core/pure-system "0123456789ABC" 13 2 false))
-(iso-7064.core/calc-check-character sys "05BC")
-(iso-7064.core/valid? sys "05BCA")
+(def sys (pure-system "0123456789ABC" 13 2 false))
+(calc-check-character sys "05BC")
+(valid? sys "05BCA")
 ```
 Note: Custom systems may be useless, if arguments are chosen unwisely.
 For more information refer to the [standard][1] or other sources on check
