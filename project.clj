@@ -2,6 +2,7 @@
   :description "Implementation of ISO 7064"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  :url "https://github.com/knoppiks/iso-7064"
   :dependencies [[org.clojure/clojure "1.8.0"]]
 
   :profiles {:dev
